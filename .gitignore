@@ -1,0 +1,28 @@
+# Firebase specific files
+.firebaserc
+firebase-debug.log
+firebase-debug.*.log
+.runtimeconfig.json
+
+# Node.js dependencies (common for Firebase Functions)
+node_modules/
+
+# Environment variables and secrets (if not managed by Firebase config)
+.env
+*.env
+.firebase-secrets
+
+# Build artifacts (if applicable, e.g., for web projects)
+build/
+dist/
+public/build/
+public/dist/
+
+# Operating system and editor specific files
+.DS_Store
+.vscode/
+.idea/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
