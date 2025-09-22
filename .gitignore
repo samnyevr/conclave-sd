@@ -1,4 +1,5 @@
 # Firebase specific files
+.firebase
 .firebaserc
 firebase-debug.log
 firebase-debug.*.log

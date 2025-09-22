@@ -6,7 +6,7 @@
   "scripts": {
     "test": "firebase emulators:start",
     "deploy": "firebase deploy --only hosting",
-    "preview": "firebase hosting:channel:deploy new-awesome-feature --expires 1h"
+    "preview": "firebase hosting:channel:deploy new-awesome-feature --expires 1d"
   },
   "author": "Sam Nye VR",
   "license": "ISC"
