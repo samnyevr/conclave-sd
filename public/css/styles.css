@@ -297,5 +297,46 @@ nav {
     border: 1px solid white;
     border-radius: 50px;
     height: 70%;
+    padding: 2em;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+
+      label {
+        display: flex;
+        flex-direction: column;
+
+        input {
+          max-width: 200px;
+        }
+      }
+
+      input[type="submit"] {
+        max-width: 200px;
+      }
+
+      input[type="submit"]:hover {
+        cursor: pointer;
+      }
+    }
   }
+
+  .social-message {
+    margin-block-start: 3em;
+  }
+
+  .social {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin-block-start: 1em;
+  }
+}
+
+/* Footer */
+footer {
+  color: white;
+  text-align: center;
 }

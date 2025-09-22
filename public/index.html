@@ -44,17 +44,21 @@
     -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
+    <script src="/js/functionality.js"></script>
+
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <nav>
-      <a class="logo" href="/">Conclave</a>
-      <div class="nav-links">
-        <a class="bio" href="#dm-bio">DM Bio</a>
-        <a class="events" href="#events">Events</a>
-        <a class="contact" href="#contact-us">Contact Us</a>
-      </div>
-    </nav>
+    <header>
+      <nav>
+        <a class="logo" href="/">Conclave</a>
+        <div class="nav-links">
+          <a class="bio" href="#dm-bio">DM Bio</a>
+          <a class="events" href="#events">Events</a>
+          <a class="contact" href="#contact-us">Contact Us</a>
+        </div>
+      </nav>
+    </header>
     <section id="hero" class="fullscreen">
       <h2>Conclave SD</h2>
       <p>Pick your guild, Join the Conclave</p>
@@ -166,8 +170,34 @@
     </section>
     <section id="contact-us" class="fullscreen">
       <h2>Contact Us</h2>
-      <section></section>
+      <section>
+        <p>Drop a message</p>
+        <form action="">
+          <label>
+            Name
+            <input type="text" />
+          </label>
+          <label>
+            Email
+            <input type="email" />
+          </label>
+          <label>
+            Message
+            <textarea type="textarea" rows="4" cols="50"></textarea>
+          </label>
+          <input type="submit" />
+        </form>
+      </section>
+      <p class="social-message">You can also find us on social media</p>
+      <div class="social">
+        <img src="/assets/instagram.png" />
+        <img src="/assets/twitter.png" />
+        <img src="/assets/tiktok.png" />
+      </div>
     </section>
     <script defer src="/js/firebase.js"></script>
+    <footer>
+      <p>&copy; 2025 . All rights reserved.</p>
+    </footer>
   </body>
 </html>
