@@ -1,6 +1,8 @@
 /* CSS Reset */
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -24,18 +26,31 @@ body {
 }
 
 /* 6. Improve media defaults */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
 /* 7. Inherit fonts for form controls */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
 /* 8. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -43,25 +58,43 @@ p, h1, h2, h3, h4, h5, h6 {
 p {
   text-wrap: pretty;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 
 /*
   10. Create a root stacking context
 */
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
 /* Font */
 @font-face {
   font-family: Medieval;
-  src: url(../assets/MedievalSharp/MedievalSharp-Regular.ttf)
+  src: url(../assets/MedievalSharp/MedievalSharp-Regular.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: Medieval, sans-serif;
+  background-color: #212121;
+}
+
+/* Section General */
+section.fullscreen {
+  min-height: 100vh;
+  width: 100vw;
+  padding: 5em 2em;
 }
 
 /* Navigation */
@@ -70,7 +103,8 @@ nav {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding: 1em 5em;
+  padding: 1em 2em;
+  background-color: rgba(0, 0, 0, 0.1);
 
   a {
     color: white;
@@ -78,14 +112,17 @@ nav {
     font-size: 1.5em;
   }
 
+  a:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
   .nav-links {
     display: flex;
     gap: 1em;
   }
-
 }
 
-/* Hero Section */ 
+/* Hero Section */
 #hero {
   width: 100vw;
   min-height: 100vh;
@@ -95,8 +132,10 @@ nav {
   flex-direction: column;
   background-image: url("../assets/double-door.png");
   background-size: contain;
+  color: white;
 
-  h2, p {
+  h2,
+  p {
     color: white;
   }
 
@@ -106,9 +145,157 @@ nav {
 
   p {
     font-size: 2em;
-    
+  }
+
+  .ctas {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    margin-block-start: 3em;
+
+    .cta {
+      color: white;
+      text-decoration: none;
+      padding: 1em 1em;
+      border: 1px solid rgb(241, 255, 227);
+      border-radius: 20px;
+      min-width: 170px;
+      background-color: rgb(18, 37, 0);
+      display: flex;
+      justify-content: center;
+    }
+
+    .cta:hover {
+      background-color: rgb(18, 37, 0, 0.5);
+    }
+
+    .cta:last-child {
+      color: black;
+      background-color: white;
+    }
+
+    .cta:last-child:hover {
+      background-color: rgba(1, 1, 1, 0.5);
+      color: white;
+    }
   }
 }
 
-/* DM Bio Section */
+/* Events Section */
+#events {
+  color: white;
 
+  section {
+    margin-block-start: 3em;
+    border: 1px solid white;
+    border-radius: 50px;
+    height: 70%;
+    padding: 2em;
+
+    img {
+      max-height: 800px;
+    }
+  }
+
+  border-block-end: 1px solid white;
+}
+
+/* DM Bio Section */
+#dm-bio {
+  color: white;
+
+  article.dms {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-between;
+    margin-top: 3em;
+  }
+
+  article.dm {
+    border: 1px solid white;
+    border-radius: 50px;
+    min-width: 300px;
+    max-width: 500px;
+    height: 100%;
+
+    button {
+      all: unset;
+    }
+
+    button:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 50px;
+      cursor: pointer;
+    }
+
+    picture {
+      height: 30%;
+      width: 100%;
+
+      img {
+        object-fit: cover;
+        object-position: top;
+        max-height: 400px;
+        height: 100%;
+        width: 100%;
+        border-radius: 49px 49px 0 0;
+      }
+    }
+
+    .dm-description {
+      height: 70%;
+      width: 100%;
+      border-block-start: 1px solid white;
+      padding: 2em 2em;
+
+      .tags {
+        display: flex;
+        gap: 1em;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-block-end: 2em;
+
+        li {
+          border: 1px solid white;
+          border-radius: 10px;
+          padding-inline: 10px;
+        }
+      }
+
+      p {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-height: 245px;
+        display: -webkit-box;
+        display: -webkit-box;
+        -webkit-line-clamp: 10;
+        -webkit-box-orient: vertical;
+      }
+
+      p.clickable {
+        color: rgb(76, 76, 255);
+      }
+
+      p.clickable:hover {
+        color: blue;
+      }
+    }
+  }
+
+  border-block-end: 1px solid white;
+}
+
+/* Contact Us Section */
+#contact-us {
+  color: white;
+
+  section {
+    margin-block-start: 3em;
+    border: 1px solid white;
+    border-radius: 50px;
+    height: 70%;
+  }
+}

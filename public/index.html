@@ -1,47 +1,172 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Conclave SD</title>
 
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/12.2.1/firebase-app-compat.js"></script>
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/12.2.1/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/12.2.1/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/12.2.1/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/12.2.1/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/12.2.1/firebase-messaging-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/12.2.1/firebase-database-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/12.2.1/firebase-firestore-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/12.2.1/firebase-functions-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/12.2.1/firebase-messaging-compat.js"
+    ></script>
     <script defer src="/__/firebase/12.2.1/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/12.2.1/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/12.2.1/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/12.2.1/firebase-performance-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/12.2.1/firebase-analytics-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/12.2.1/firebase-remote-config-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/12.2.1/firebase-performance-compat.js"
+    ></script>
     <!-- 
       initialize the SDK after all desired features are loaded, set useEmulator to false
       to avoid connecting the SDK to running emulators.
     -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-    <link rel="stylesheet" href="/public/css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
     <nav>
       <a class="logo" href="/">Conclave</a>
       <div class="nav-links">
         <a class="bio" href="#dm-bio">DM Bio</a>
-        <a class="contact" href="contact-us">Contact Us</a>
+        <a class="events" href="#events">Events</a>
+        <a class="contact" href="#contact-us">Contact Us</a>
       </div>
     </nav>
-    <section id="hero">
+    <section id="hero" class="fullscreen">
       <h2>Conclave SD</h2>
       <p>Pick your guild, Join the Conclave</p>
+      <div class="ctas">
+        <a href="#events" class="cta">View Upcoming Events</a>
+        <a href="#contact-us" class="cta">Contact Us</a>
+      </div>
     </section>
-    <section id="dm-bio">
+    <section id="events" class="fullscreen">
+      <h2>Events</h2>
+      <section>
+        <h3>Halloween Night</h3>
+        <img src="/assets/halloween-game.png" alt="" />
+      </section>
+    </section>
+    <section id="dm-bio" class="fullscreen">
       <h2>DM Bio</h2>
+      <article class="dms">
+        <article class="dm">
+          <button>
+            <picture>
+              <img src="./assets/DM1.png" alt="" />
+            </picture>
+            <div class="dm-description">
+              <ul class="tags">
+                <li>Dnd</li>
+                <li>New</li>
+              </ul>
+              <p>
+                Chris runs a campaign called “Shards of the Sunken Crown,” set
+                in a sprawling archipelago of drowned kingdoms, volcanic
+                islands, and shifting tides where noble houses vie for fragments
+                of a legendary crown said to command the seas. His games blend
+                exploration, moral dilemmas, and the thrill of uncovering
+                civilizations lost beneath the waves, with richly detailed
+                descriptions that bring the world to life. Though young, he has
+                built a reputation as a natural storyteller, drawing inspiration
+                from old sailor’s journals and tales of forgotten empires, and
+                his players praise both his patience and his ability to balance
+                mechanics with atmosphere. What sets him apart is the joy he
+                takes in watching his players reshape his carefully woven worlds
+                with their choices, ensuring no two adventures ever feel the
+                same.
+              </p>
+              <p class="clickable">Read More</p>
+            </div>
+          </button>
+        </article>
+        <article class="dm">
+          <button>
+            <picture>
+              <img src="./assets/DM2.png" alt="" />
+            </picture>
+            <div class="dm-description">
+              <ul class="tags">
+                <li>Dnd</li>
+                <li>CoS</li>
+              </ul>
+              <p>
+                John is known for his campaign “The Labyrinth of Forgotten
+                Stars,” a sprawling epic that carries his players through
+                crumbling empires, cursed bloodlines, and hidden realms between
+                worlds. Decades of experience have honed his ability to craft
+                layered narratives, where even the smallest detail—a discarded
+                trinket, a whispered rumor—can blossom into a pivotal turning
+                point. His style is deliberate and methodical, favoring slow
+                builds of tension that erupt into unforgettable climaxes, and
+                his players often remark on the weight his storytelling gives to
+                every decision. With a lifetime of study in history, myth, and
+                philosophy, he shapes his sessions into more than games—they
+                become meditations on legacy, sacrifice, and the stories we
+                leave behind.
+              </p>
+              <p class="clickable">Read More</p>
+            </div>
+          </button>
+        </article>
+        <article class="dm">
+          <button>
+            <picture>
+              <img src="./assets/DM3.png" alt="" />
+            </picture>
+            <div class="dm-description">
+              <ul class="tags">
+                <li>Starwars</li>
+                <li>Fantasy</li>
+              </ul>
+              <p>
+                Ashley commands the table with her campaign “Veil of the
+                Evershadow,” a tale steeped in mystery where players navigate
+                haunted forests, crumbling keeps, and shifting fey realms that
+                blur the line between dream and waking life. Her worlds are lush
+                with atmosphere—every flicker of candlelight, every echoing
+                footstep feels intentional—drawing her players into stories that
+                are equal parts eerie and enchanting. Known for her
+                improvisational brilliance, she weaves player choices seamlessly
+                into the unfolding narrative, ensuring that no two sessions ever
+                follow the same path. Her background in folklore and theater
+                lends her games a dramatic weight, and her table thrives on
+                emotional intensity, with characters often tested as much by
+                their own fears and loyalties as by the monsters lurking in the
+                dark.
+              </p>
+              <p class="clickable">Read More</p>
+            </div>
+          </button>
+        </article>
+      </article>
     </section>
-    <section id="contact-us">
+    <section id="contact-us" class="fullscreen">
       <h2>Contact Us</h2>
+      <section></section>
     </section>
     <script defer src="/js/firebase.js"></script>
   </body>

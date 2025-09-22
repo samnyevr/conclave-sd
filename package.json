@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "firebase deploy --only hosting"
+    "test": "firebase emulators:start",
+    "deploy": "firebase deploy --only hosting",
+    "preview": "firebase hosting:channel:deploy new-awesome-feature --expires 1h"
   },
   "author": "Sam Nye VR",
   "license": "ISC"
