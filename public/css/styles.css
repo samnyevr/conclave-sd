@@ -122,6 +122,13 @@ nav {
   }
 }
 
+.alert {
+  background-color: white;
+  color: red;
+  position: fixed;
+  width: 100%;
+}
+
 /* Hero Section */
 #hero {
   width: 100vw;
