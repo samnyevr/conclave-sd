@@ -203,6 +203,15 @@ nav {
   }
 }
 
+/* Partial Section */
+.partial {
+  width: 100%;
+  padding: 2em;
+  color: white;
+  background-color: rgb(18, 37, 0);
+  font-size: 2em;
+}
+
 /* Events Section */
 #events {
   color: white;
@@ -226,7 +235,12 @@ nav {
 #dm-bio {
   color: white;
 
-  article.dms {
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .dms {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -235,7 +249,7 @@ nav {
     margin-top: 3em;
   }
 
-  article.dm {
+  .dm {
     border: 1px solid white;
     border-radius: 50px;
     min-width: 300px;
@@ -305,6 +319,20 @@ nav {
         color: blue;
       }
     }
+  }
+
+  dialog {
+    max-width: 1240px;
+    margin: auto;
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+  }
+
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
   }
 
   border-block-end: 1px solid white;

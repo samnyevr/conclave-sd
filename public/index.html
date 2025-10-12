@@ -82,6 +82,14 @@
         <a href="#contact-us" class="cta">Contact Us</a>
       </div>
     </section>
+    <section class="partial">
+      <p>
+        We are a new tabletop gaming convention launching in San Diego — a
+        community-driven event designed to celebrate our shared love of board
+        games, RPGs, miniatures, and the incredible local stores that keep the
+        hobby alive.
+      </p>
+    </section>
     <section id="events" class="fullscreen">
       <h2>Events</h2>
       <section>
@@ -91,97 +99,142 @@
     </section>
     <section id="dm-bio" class="fullscreen">
       <h2>DM Bio</h2>
-      <article class="dms">
-        <article class="dm">
-          <button>
-            <picture>
-              <img src="./assets/DM1.png" alt="" />
-            </picture>
-            <div class="dm-description">
-              <ul class="tags">
-                <li>Dnd</li>
-                <li>New</li>
-              </ul>
-              <p>
-                Chris runs a campaign called “Shards of the Sunken Crown,” set
-                in a sprawling archipelago of drowned kingdoms, volcanic
-                islands, and shifting tides where noble houses vie for fragments
-                of a legendary crown said to command the seas. His games blend
-                exploration, moral dilemmas, and the thrill of uncovering
-                civilizations lost beneath the waves, with richly detailed
-                descriptions that bring the world to life. Though young, he has
-                built a reputation as a natural storyteller, drawing inspiration
-                from old sailor’s journals and tales of forgotten empires, and
-                his players praise both his patience and his ability to balance
-                mechanics with atmosphere. What sets him apart is the joy he
-                takes in watching his players reshape his carefully woven worlds
-                with their choices, ensuring no two adventures ever feel the
-                same.
-              </p>
-              <p class="clickable">Read More</p>
-            </div>
-          </button>
-        </article>
-        <article class="dm">
-          <button>
-            <picture>
-              <img src="./assets/DM2.png" alt="" />
-            </picture>
-            <div class="dm-description">
-              <ul class="tags">
-                <li>Dnd</li>
-                <li>CoS</li>
-              </ul>
-              <p>
-                John is known for his campaign “The Labyrinth of Forgotten
-                Stars,” a sprawling epic that carries his players through
-                crumbling empires, cursed bloodlines, and hidden realms between
-                worlds. Decades of experience have honed his ability to craft
-                layered narratives, where even the smallest detail—a discarded
-                trinket, a whispered rumor—can blossom into a pivotal turning
-                point. His style is deliberate and methodical, favoring slow
-                builds of tension that erupt into unforgettable climaxes, and
-                his players often remark on the weight his storytelling gives to
-                every decision. With a lifetime of study in history, myth, and
-                philosophy, he shapes his sessions into more than games—they
-                become meditations on legacy, sacrifice, and the stories we
-                leave behind.
-              </p>
-              <p class="clickable">Read More</p>
-            </div>
-          </button>
-        </article>
-        <article class="dm">
-          <button>
-            <picture>
-              <img src="./assets/DM3.png" alt="" />
-            </picture>
-            <div class="dm-description">
-              <ul class="tags">
-                <li>Starwars</li>
-                <li>Fantasy</li>
-              </ul>
-              <p>
-                Ashley commands the table with her campaign “Veil of the
-                Evershadow,” a tale steeped in mystery where players navigate
-                haunted forests, crumbling keeps, and shifting fey realms that
-                blur the line between dream and waking life. Her worlds are lush
-                with atmosphere—every flicker of candlelight, every echoing
-                footstep feels intentional—drawing her players into stories that
-                are equal parts eerie and enchanting. Known for her
-                improvisational brilliance, she weaves player choices seamlessly
-                into the unfolding narrative, ensuring that no two sessions ever
-                follow the same path. Her background in folklore and theater
-                lends her games a dramatic weight, and her table thrives on
-                emotional intensity, with characters often tested as much by
-                their own fears and loyalties as by the monsters lurking in the
-                dark.
-              </p>
-              <p class="clickable">Read More</p>
-            </div>
-          </button>
-        </article>
-      </article>
+      <ul class="dms">
+        <li class="dm">
+          <article class="first js-dialog-toggle">
+            <button>
+              <picture>
+                <img src="./assets/lorphic-tales.jpg" alt="" />
+              </picture>
+              <div class="dm-description">
+                <ul class="tags">
+                  <li>Dnd</li>
+                  <li>New</li>
+                </ul>
+                <h2>Lorphic Tales</h2>
+                <p class="js-dialog">
+                  I am Lorphic Tales and it’s an honor to me that you’re reading
+                  my bio. My journey with Dungeons and Dragons began with the
+                  experience of Larian Studio’s Baldur’s Gate 3. The rich lore,
+                  grandiose setting, and roleplaying experience piqued my
+                  interest into trying out the Table Top Roleplaying Experience
+                  with my local game store at TC’s Rockets, San Diego. Since
+                  then I’ve played an avid role as both a player and dungeon
+                  master in community events such as SDCC with West Coast
+                  Adventure’s Guild, Halloween with Kraken Dice, SD Rocket Con,
+                  and more. My passion for the game stems from the creativity
+                  the community creates and the role they play to make fantasy
+                  become reality. My goal in every session is to make people
+                  excited to play Dungeons & Dragons, feel like they belong, and
+                  maybe even walk away with new friends. I hope that you, the
+                  reader, are able to find that when playing Dungeons and
+                  Dragons. In whatever shape or form that it takes.
+                </p>
+                <p class="clickable">Read More</p>
+              </div>
+            </button>
+            <dialog id="first" class="js-dialog">
+              <form method="dialog">
+                <menu>
+                  <button>Close</button>
+                </menu>
+              </form>
+              <p>some words</p>
+            </dialog>
+          </article>
+        </li>
+        <li class="dm">
+          <article class="second js-dialog-toggle">
+            <button>
+              <picture>
+                <img src="./assets/Angelo.jpg" alt="" />
+              </picture>
+              <div class="dm-description">
+                <ul class="tags">
+                  <li>Dnd</li>
+                  <li>CoS</li>
+                </ul>
+                <h2>Angelo</h2>
+                <p>
+                  Hey there gremlins, goblins, and ghouls! My name is Angelo and
+                  I've been in the D&D community for over a decade. Beginning in
+                  my middle school years, I have continued to create and explore
+                  vibrant and intricate stories for friends, family, and so so
+                  many others and I can only hope that I get to have you at one
+                  of my future campaigns! If you're looking for a DM who will
+                  spend hours on end, helping you craft your characters into an
+                  evolving and enriched world then bring some snacks and take a
+                  seat at my table!
+                  <br />
+                  I have worked at RocketCon and plan on continuing to expand my
+                  reach to even more Cons in the future. The biggest milestone
+                  in the D&D space would be joining TCsRockets Adventures as
+                  this has truly kickstarted my passion to bringing campaigns to
+                  even more people! My style and flare is built off of roleplay
+                  and story first, followed closely by intricate and intense
+                  combat.
+                </p>
+                <p class="clickable">Read More</p>
+              </div>
+            </button>
+            <dialog id="second" class="js-dialog">
+              <form method="dialog">
+                <menu>
+                  <button>Close</button>
+                </menu>
+              </form>
+              <p>some words</p>
+            </dialog>
+          </article>
+        </li>
+        <li class="dm">
+          <article class="third js-dialog-toggle">
+            <button>
+              <picture>
+                <img src="./assets/DM2.png" alt="" />
+              </picture>
+              <div class="dm-description">
+                <ul class="tags">
+                  <li>Starwars</li>
+                  <li>Fantasy</li>
+                </ul>
+                <h2>Eric</h2>
+                <p>
+                  Eric has been running worlds and telling stories on and off
+                  since 1984. For the past eight years, he has been a full-time
+                  Dungeon Master, guiding players of all ages through multi-year
+                  campaigns, epic one-shots, and countless adventures. His
+                  tables are known for immersive roleplay, gritty realism, and
+                  worlds where the fantastic still makes sense. Eric focuses on
+                  player-led storytelling while ensuring that magic, combat, and
+                  choices feel tangible and impactful. His real-world
+                  experiences—climbing mountains, spelunking, trudging through
+                  hip-deep snow, and even medieval fighting in armor under the
+                  sun—fuel the authenticity of the stories he weaves. He
+                  currently runs games with TC Rockets, the West Coast
+                  Adventurers Guild, and has run D&D at some of the biggest
+                  cons, including Comic-Con, WonderCon, and Rocket-Con. He is
+                  also passionate about passing the torch onto a whole new
+                  generation of players, having led a year-long after-school
+                  program introducing 5th graders to D&D. For Eric, being a
+                  Dungeon Master is more than running a game—it is building
+                  worlds, sharing adventures, and creating unforgettable
+                  memories at the table.
+                </p>
+                <p class="clickable">Read More</p>
+              </div>
+            </button>
+          </article>
+          <dialog id="third" class="js-dialog">
+            <form method="dialog">
+              <menu>
+                <button>Close</button>
+              </menu>
+            </form>
+            <p>some words</p>
+          </dialog>
+        </li>
+      </ul>
     </section>
     <section id="contact-us" class="fullscreen">
       <h2>Contact Us</h2>
@@ -208,7 +261,9 @@
         <img src="/assets/instagram.png" />
         <img src="/assets/twitter.png" />
         <img src="/assets/tiktok.png" />
-        <img src="/assets/discord.png" />
+        <a href="https://discord.gg/t28CztatpY" target="_blank"
+          ><img src="/assets/discord.png"
+        /></a>
       </div>
     </section>
     <script defer src="/js/firebase.js"></script>
