@@ -78,12 +78,30 @@ h6 {
 /* Font */
 @font-face {
   font-family: Medieval;
-  src: url(../assets/MedievalSharp/MedievalSharp-Regular.ttf);
+  src: url(../assets/fonts/MedievalSharp/MedievalSharp-Regular.woff2);
 }
 
 @font-face {
   font-family: Elven;
-  src: url(../assets/elven-common-speak-font/Elvencommonspeak-0WXz.ttf);
+  src: url(../assets/fonts/elven-common-speak-font/Elvencommonspeak-0WXz.ttf);
+}
+
+/* Color */
+:root {
+  --color-primary: #122500;
+  --color-secondary: #e3e7d3;
+  --color-accent: #e6e49f;
+  --color-grey-1: #bdc2bf;
+  --color-grey-2: #989c94;
+  --color-grey-3: #212121;
+  --color-green-1: #e3e7d3;
+  --color-green-2: #122500;
+  --color-yellow-1: #e6e49f;
+  --color-discord: #5865f2;
+}
+
+section.discord {
+  background-color: var(--color-discord);
 }
 
 html {
@@ -92,7 +110,7 @@ html {
 
 body {
   font-family: Medieval, sans-serif;
-  background-color: #212121;
+  background-color: var(--color-grey-3);
 }
 
 /* Section General */
@@ -142,24 +160,81 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url("../assets/double-door1-nobg.png");
+  background-image: url("../assets/images/double-door-nobg.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   color: white;
   background-color: transparent;
 
+  @supports (background-image: url("../assets/images/double-door-nobg.webp")) {
+    background-image: url("../assets/images/double-door-nobg.webp");
+  }
+
+  @supports (background-image: url("../assets/images/double-door-nobg.avif")) {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.25) calc(50vw - 400px),
+        rgba(0, 0, 0, 0.45) calc(50vw - 250px),
+        rgba(0, 0, 0, 0) calc(50vw),
+        rgba(0, 0, 0, 0.45) calc(50vw + 250px),
+        rgba(0, 0, 0, 0.25) calc(50vw + 400px),
+        rgba(0, 0, 0, 0)
+      ),
+      url("../assets/images/double-door-nobg.avif");
+  }
+
   &.scrolled {
-    background-image: url("../assets/double-door-open-nobg.png");
+    background-image: url("../assets/images/double-door-open-nobg.png");
+
+    @supports (
+      background-image: url("../assets/images/double-door-open-nobg.webp")
+    ) {
+      background-image: url("../assets/images/double-door-open-nobg.webp");
+    }
+
+    @supports (
+      background-image: url("../assets/images/double-door-open-nobg.avif")
+    ) {
+      background-image: url("../assets/images/double-door-open-nobg.avif");
+    }
   }
 
   &::after {
     content: "";
     width: 100%;
     height: 100vh;
-    background-image: url("../assets/wall.png");
+    background-image: radial-gradient(
+        ellipse at center,
+        rgba(0, 0, 0, 0) 65%,
+        rgba(0, 0, 0, 0.3) 75%,
+        rgba(0, 0, 0, 0.95) 100%
+      ),
+      url("../assets/images/wall.png");
     position: absolute;
     z-index: -1;
+    background-size: cover;
+
+    @supports (background-image: url("../assets/images/wall.webp")) {
+      background-image: radial-gradient(
+          ellipse at center,
+          rgba(0, 0, 0, 0) 50%,
+          rgba(0, 0, 0, 0.5) 75%,
+          rgba(0, 0, 0, 0.95) 100%
+        ),
+        url("../assets/images/wall.webp");
+    }
+
+    @supports (background-image: url("../assets/images/wall.avif")) {
+      background-image: radial-gradient(
+          ellipse at center,
+          rgba(0, 0, 0, 0) 50%,
+          rgba(0, 0, 0, 0.5) 75%,
+          rgba(0, 0, 0, 0.95) 100%
+        ),
+        url("../assets/images/wall.avif");
+    }
   }
 
   h2,
@@ -255,27 +330,45 @@ nav {
   width: 100%;
   padding: 2em;
   color: white;
-  background-color: rgb(18, 37, 0);
+  background-color: var(--darker-grey-color);
   font-size: 2em;
 }
 
 /* Events Section */
 #events {
   color: white;
+  padding: 0;
 
   section {
-    margin-block-start: 3em;
-    border: 1px solid white;
-    border-radius: 50px;
-    height: 70%;
-    padding: 2em;
+    border: 0;
+    padding-inline: 5em;
+    margin: 0;
+    padding-block: 0;
+    display: flex;
+    background-color: var(--color-secondary);
+
+    &.event-reverse {
+      background: var(--color-primary);
+
+      .event-description {
+        color: var(--color-grey-1);
+        order: -1;
+      }
+    }
 
     img {
-      max-height: 800px;
+      width: 45%;
+    }
+
+    .event-description {
+      color: var(--color-grey-3);
+      padding: 2em;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
     }
   }
-
-  border-block-end: 1px solid white;
 }
 
 /* DM Bio Section */
@@ -381,8 +474,6 @@ nav {
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
   }
-
-  border-block-end: 1px solid white;
 }
 
 /* Contact Us Section */
