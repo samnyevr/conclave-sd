@@ -86,6 +86,11 @@ h6 {
   src: url(../assets/fonts/elven-common-speak-font/Elvencommonspeak-0WXz.ttf);
 }
 
+@font-face {
+  font-family: Montserrat;
+  src: url(../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
 /* Color */
 :root {
   --color-primary: #122500;
@@ -116,7 +121,7 @@ html {
 }
 
 body {
-  font-family: Medieval, sans-serif;
+  font-family: Montserrat, sans-serif;
   background-color: var(--color-grey-3);
 }
 
@@ -167,6 +172,7 @@ nav {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  font-family: Medieval, sans-serif;
 
   .hero-background-overlay {
     position: absolute;
